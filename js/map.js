@@ -1414,7 +1414,6 @@ function zoomTo(Name){
 let zoom2poly = geojson_layer.getLayers().filter(item => item.feature.properties.Name === Name)
 
 map.fitBounds(zoom2poly[0].getBounds())
-
 }
 
 
