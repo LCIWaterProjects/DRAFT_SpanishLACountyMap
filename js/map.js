@@ -1105,8 +1105,7 @@ function createInfoPanel(){
         // if feature is not highlighted
         else
         {
-            this._div.innerHTML = 'Click on a Water System<br>'+
-                                    'Spanish Translate';
+            this._div.innerHTML = 'Haga Clic en un Sistema de Agua'
         }
     };
 

@@ -29,7 +29,7 @@ body {
 	padding:10px;
 	background-color: #005687;
 	color: white;
-	font-size: 2em;
+	font-size: 160%;
 
 }
 .headerbuttons {
@@ -141,6 +141,7 @@ a{
     padding: 8px 10px;
     font: 14px/16px Verdana, Geneva, Tahoma, sans-serif;
     background: white;
+    text-align: center;
     background: rgba(255,255,255,0.8);
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     border-radius: 5px;
@@ -196,7 +197,7 @@ border-radius: 5px;
 }
 
 .sidebar-item {
-    padding: 10px; /* adds inner padding */
+    padding: 9px; /* adds inner padding */
     background: rgb(182, 199, 245); /* background color of the card */
     border: 1px solid rgb(104, 131, 253); /* border width and color */
     margin: 50px; /* outer padding */
@@ -241,11 +242,11 @@ b {
     padding-bottom: 20px;
     text-overflow: inherit;
     text-align: left;
+    color: black;
 }
 
 /* Fonts */
 .header {font-family: Verdana, Geneva, Tahoma, sans-serif;}
-.header {font-size: 180%;}
 .sidebar-item {font-family: Verdana, Geneva, Tahoma, sans-serif;}
 .sidebar {font-family: Verdana, Geneva, Tahoma, sans-serif;}
 .sidebar-item {font-size: 80%;}
