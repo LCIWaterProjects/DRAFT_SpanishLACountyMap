@@ -14,7 +14,7 @@ body,html {
 body {
 	display:grid;
 	grid-template-rows: 60px 1fr ;
-	grid-template-columns: 300px 1fr;
+	grid-template-columns: 355px 1fr;
 	grid-template-areas: 
 	"header header header"
     "sidebar content content"
@@ -78,11 +78,22 @@ a{
     line-height: 1.5em;
 	color: rgb(0, 0, 0);
 	grid-area: sidebar;
-    width: 250px;
+    width: 315px;
     font-size: 14px;
 	padding:0px;
 	background-color: #ffffff;
 
+}
+
+.sidebar-indigenous {
+    line-height: 1.5em;
+	color: rgb(0, 0, 0);
+	grid-area: sidebar;
+    width: 315px;
+    font-size: 14px;
+	padding:0px;
+    text-align: center;
+	background-color: #ffffff;
 }
 .sidebar {
     line-height: 2.6em;
@@ -138,7 +149,7 @@ a{
 
 /* legend styles */
 .info {
-    padding: 8px 10px;
+    padding: 10px 10px;
     font: 14px/16px Verdana, Geneva, Tahoma, sans-serif;
     background: white;
     text-align: center;
@@ -146,7 +157,7 @@ a{
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     border-radius: 5px;
     max-width: 400px;
-    min-height: 50px;
+    min-height: 20px;
 }
 
 .info-legend{
@@ -221,12 +232,13 @@ button {
     background-color: #005687;
     color: white;
     padding: 10px;
-    width: 250px;
+    width: 280px;
     font-size: 15px;
     border: none;
     border-radius: 4px;
     transition-duration: 0.3s;
     cursor: pointer;
+    text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 

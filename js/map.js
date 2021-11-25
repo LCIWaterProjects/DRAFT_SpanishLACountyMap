@@ -1,7 +1,7 @@
 // Global variables
 let map;
-let lat = 34;
-let lon = -118;
+let lat = 33.9;
+let lon = -118.5;
 let zl = 9;
 
 let geojsonPath = 'https://raw.githubusercontent.com/LCIWaterProjects/DRAFT-LA-County-Governance-Map/main/RiskCode.geojson';
@@ -514,26 +514,26 @@ function createLegend(){
 
         if(fieldtomap == 'GovernanceCode'){
             div.innerHTML =
-            '<b>Water System <br>Governance Type</b><br>'+
-            '<div style="background-color: #6C91BF"></div>City/Municpal<br>' +
-            '<div style="background-color: #5BC8AF"></div>County<br>' +
-            '<div style="background-color: #51344D"></div>Investor Owned Utility<br>' +
-            '<div style="background-color: #FED18C"></div>Mutual Water Company<br>'+
-            '<div style="background-color: #109648"></div>Special District<br>' +
-            '<div style="background-color: #F46036"></div>Mobile Home<br>' +
-            '<div style="background-color: #1AC8ED"></div>Irrigation District<br>'+
-            '<div style="background-color: #C47335"></div>Other Private<br>'+
-            '<div style="background-color: #272727"></div>Unknown<br>'
+            '<b>Tipo de Gobernanza del Sistema de Agua</b><br>'+
+            '<div style="background-color: #6C91BF"></div>Ciudad/Municipal<br>' +
+            '<div style="background-color: #5BC8AF"></div>Condado<br>' +
+            '<div style="background-color: #51344D"></div>Utilidad Propiedad del Inversionista<br>' +
+            '<div style="background-color: #FED18C"></div>Mutua de Agua<br>'+
+            '<div style="background-color: #109648"></div>Distrito Especial<br>' +
+            '<div style="background-color: #F46036"></div>Autocaravana<br>' +
+            '<div style="background-color: #1AC8ED"></div>Distrito de Riego<br>'+
+            '<div style="background-color: #C47335"></div>Otro Privado<br>'+
+            '<div style="background-color: #272727"></div>Desconocido<br>'
             return div;
             
     
         }
         else if(fieldtomap == 'MechanismCode'){
             div.innerHTML =
-            '<b>How Is Leadership Chosen?</b><br>'+
-            '<div style="background-color: #E4572E"></div>Election<br>'+
-            '<div style="background-color: #F3A712"></div>Appointment<br>'+
-            '<div style="background-color: #CECFC7"></div>No Data<br>'
+            '<b>Cómo se Elige el Liderazgo</b><br>'+
+            '<div style="background-color: #E4572E"></div>Elecciones<br>'+
+            '<div style="background-color: #F3A712"></div>Nombramiento<br>'+
+            '<div style="background-color: #CECFC7"></div>Sin Datos<br>'
             return div;
             console.log('mapping mechanism code')
 
@@ -542,7 +542,7 @@ function createLegend(){
         }
         else if(fieldtomap == 'Population'){
             div.innerHTML =
-            '<b>Water System Population</b><br>'+
+            '<b>Población del Sistema de Agua (Personas)</b><br>'+
             '<div style="background-color: #FFD899"></div>0 - 35,000<br>'+
             '<div style="background-color: #FFC247"></div>35,001 - 70,000<br>'+
             '<div style="background-color: #FF990A"></div>70,001 - 115,000<br>'+
@@ -558,7 +558,7 @@ function createLegend(){
         }
         else if(fieldtomap == 'Service_Co'){
             div.innerHTML =
-            '<b>Water System Service Connections</b><br>'+
+            '<b>Conexiones de Servicio del Sistema<br>de Agua (Casas/Edificios)</b><br>'+
             '<div style="background-color: #BFEDCF"></div>0 - 500<br>'+
             '<div style="background-color: #8DCEB4"></div>501 - 3,300<br>'+
             '<div style="background-color: #62A7A6"></div>3,301 - 10,000<br>'+
@@ -574,13 +574,13 @@ function createLegend(){
         }
         else if(fieldtomap == 'WaterBill'){
             div.innerHTML =
-            '<b>Average Water<br> Bill</b><br>'+
+            '<b>Factura Media de Agua</b><br>'+
             '<div style="background-color: #F5B7B9"></div>$0 - $38<br>'+
             '<div style="background-color: #EE8185"></div>$38 -$57<br>'+
             '<div style="background-color: #E74B51"></div>$57 - $72<br>'+
             '<div style="background-color: #D71D24"></div>$72 - $90<br>'+
-            '<div style="background-color: #A4161A"></div>Over $90<br>'+
-            '<div style="background-color: #CECFC7"></div>No Data<br>'
+            '<div style="background-color: #A4161A"></div>Mas que $90<br>'+
+            '<div style="background-color: #CECFC7"></div>Sin Datos<br>'
 
             return div;
             console.log('mapping mechanism code')
@@ -590,16 +590,16 @@ function createLegend(){
         }
         else if(fieldtomap == 'HMW'){
             div.innerHTML =
-            '<b>Minimum Wage<br>Hours</b>'+
-            '<br><div style="background-color: #CECFC7"></div>No Data<br>'+
-            '<div style="background-color: #F0FB9D"></div>1 Hour<br>' +
-            '<div style="background-color: #DCF613"></div>2 Hours<br>' +
-            '<div style="background-color: #97D91C"></div>3 Hours<br>'+
-            '<div style="background-color: #55A630"></div>4 Hours<br>' +
-            '<div style="background-color: #16834F"></div>5 Hours<br>' +
-            '<div style="background-color: #0B6B46"></div>6 Hours<br>' +
-            '<div style="background-color: #00523D"></div>7 Hours<br>'+
-            '<div style="background-color: #003D2D"></div>8 Hours<br>'
+            '<b>Horas de Salario Mínimo Tiene<br>Que Trabajar para Pagar la<br>Factura de Agua</b>'+
+            '<br><div style="background-color: #CECFC7"></div>Sin Datos<br>'+
+            '<div style="background-color: #F0FB9D"></div>1 Hora<br>' +
+            '<div style="background-color: #DCF613"></div>2 Horas<br>' +
+            '<div style="background-color: #97D91C"></div>3 Horas<br>'+
+            '<div style="background-color: #55A630"></div>4 Horas<br>' +
+            '<div style="background-color: #16834F"></div>5 Horas<br>' +
+            '<div style="background-color: #0B6B46"></div>6 Horas<br>' +
+            '<div style="background-color: #00523D"></div>7 Horas<br>'+
+            '<div style="background-color: #003D2D"></div>8 Horas<br>'
           
 
 
@@ -611,12 +611,12 @@ function createLegend(){
         }
         else if(fieldtomap == 'RiskCode_RiskCode'){
             div.innerHTML =
-            '<b>Risk Score</b><br>'+
-            '<div style="background-color: #CECFC7"></div>Not In Risk Assessment<br>' +
-            '<div style="background-color: #20BF55"></div>Not At-Risk<br>' +
-            '<div style="background-color: #F9C846"></div>Potentially At-Risk<br>' +
-            '<div style="background-color: #F96900"></div>At-Risk<br>' +
-            '<div style="background-color: #E3170A"></div>Failing<br>' 
+            '<b>Calificación de Riesgo</b><br>'+
+            '<div style="background-color: #CECFC7"></div>Not Incluido en la Evaluación de Riesgos<br>' +
+            '<div style="background-color: #20BF55"></div>No en Riesgo<br>' +
+            '<div style="background-color: #F9C846"></div>Potencialmente en Riesgo<br>' +
+            '<div style="background-color: #F96900"></div>En Riesgo<br>' +
+            '<div style="background-color: #E3170A"></div>Defecto<br>' 
             
 
 
@@ -628,9 +628,9 @@ function createLegend(){
         }
         else if(fieldtomap == 'Operator Below Required'){
             div.innerHTML =
-            '<b>Does My System Operator Meet Requirements?</b><br>'+
+            '<b>¿El Operador de mi Sistema de Agua Cumple con los Requisitos de Certificacion?</b><br>'+
             '<div style="background-color: #FA0F36"></div>No<br>' +
-            '<div style="background-color: #ABB4C4"></div>Yes<br>' 
+            '<div style="background-color: #ABB4C4"></div>Si<br>' 
             
 
 
@@ -642,9 +642,9 @@ function createLegend(){
         }
         else if(fieldtomap == 'No operator'){
             div.innerHTML =
-            '<b>Does My Water System Have An Operator?</b><br>'+
+            '<b>¿Su Sistema de Agua tiene un Operador?</b><br>'+
             '<div style="background-color: #FA0F36"></div>No<br>' +
-            '<div style="background-color: #ABB4C4"></div>Yes<br>' 
+            '<div style="background-color: #ABB4C4"></div>Si<br>' 
             
 
 
@@ -656,12 +656,12 @@ function createLegend(){
         }
         else if(fieldtomap == 'RiskCode_FiveMCL'){
             div.innerHTML =
-            '<b>Number of Water System Violations</b><br>'+
-            '<div style="background-color: #CECFC7"></div>No Data <br>' +
-            '<div style="background-color: #B4DCE4"></div>No Violations<br>' +
+            '<b>Número de Infracciones al Sistema de Agua</b><br>'+
+            '<div style="background-color: #CECFC7"></div>Sin Datos<br>' +
+            '<div style="background-color: #B4DCE4"></div>Sin Infracciones<br>' +
             '<div style="background-color: #1f78b4"></div>1<br>' +
             '<div style="background-color: #F96900"></div>2-4<br>' +
-            '<div style="background-color: #E3170A"></div>5 or More<br>' 
+            '<div style="background-color: #E3170A"></div>5 o Mas<br>' 
              
             
 
@@ -841,15 +841,15 @@ function createInfoPanel(){
             if(fieldtomap == 'GovernanceCode'){
             this._div.innerHTML =`
             <p style="color:black;font-size:14px;line-height:1.5em;">
-            <b>Governance Information</b>
+            <b>Información de Gobernanza</b>
             <br><b>${properties['Name']}</b>
-            <br><a href="https://innovation.luskin.ucla.edu/" target="_blank">Full Water System Data</a>
-            <br><b>Governance Type:</b> ${properties['GovernanceType']}
-            <br><b>How is Leadership Chosen?:</b> ${properties['Mechanism']}
-            <br><b>Next Election Year:</b> ${properties['UpcomingElectionYear']}
-            <br><b>Service Connections</b> ${properties['Service_Co']}
-            <br><b>System Population:</b> ${properties['Population']}
-            <br><b>Population by Race:</b>
+            <br><a href="https://innovation.luskin.ucla.edu/" target="_blank">Datos Completos del Sistema de Agua</a>
+            <br><b>Tipo de Gobernanza:</b> ${properties['GovernanceType']}
+            <br><b>Cómo se Elige el Liderazgo:</b> ${properties['Mechanism']}
+            <br><b>Próximo Año de Elecciones:</b> ${properties['UpcomingElectionYear']}
+            <br><b>Conexiones de Servicio:</b> ${properties['Service_Co']}
+            <br><b>Población del Sistema:</b> ${properties['Population']}
+            <br><b>Población por Raza:</b>
             <br><div id="apexchart">
             </div></p>
             
@@ -858,30 +858,30 @@ function createInfoPanel(){
         else if(fieldtomap == 'MechanismCode'){
             this._div.innerHTML = `
             <p style="color:black;font-size:14px;line-height:1.5em;">
-            <b>Governance Information</b>
+            <b>Información de Gobernanza</b>
             <br><b>${properties['Name']}</b>
-            <br><a href="https://innovation.luskin.ucla.edu/" target="_blank">Full Water System Data</a>
-            <br><b>Governance Type:</b> ${properties['GovernanceType']}
-            <br><b>How is Leadership Chosen?:</b> ${properties['Mechanism']}
-            <br><b>Next Election Year:</b> ${properties['UpcomingElectionYear']}
-            <br><b>Service Connections</b> ${properties['Service_Co']}
-            <br><b>System Population:</b> ${properties['Population']}
-            <br><b>Population by Race:</b>
+            <br><a href="https://innovation.luskin.ucla.edu/" target="_blank">Datos Completos del Sistema de Agua</a>
+            <br><b>Tipo de Gobernanza:</b> ${properties['GovernanceType']}
+            <br><b>Cómo se Elige el Liderazgo:</b> ${properties['Mechanism']}
+            <br><b>Próximo Año de Elecciones:</b> ${properties['UpcomingElectionYear']}
+            <br><b>Conexiones de Servicio:</b> ${properties['Service_Co']}
+            <br><b>Población del Sistema:</b> ${properties['Population']}
+            <br><b>Población por Raza:</b>
             <br><div id="apexchart">
             </div></p>
             `}    
             else if(fieldtomap == 'Population'){
                 this._div.innerHTML = `
                 <p style="color:black;font-size:14px;line-height:1.5em;">
-                <b>Governance Information</b>
+                <b>Información de Gobernanza</b>
                 <br><b>${properties['Name']}</b>
-                <br><a href="https://innovation.luskin.ucla.edu/" target="_blank">Full Water System Data</a>
-                <br><b>Governance Type:</b> ${properties['GovernanceType']}
-                <br><b>How is Leadership Chosen?:</b> ${properties['Mechanism']}
-                <br><b>Next Election Year:</b> ${properties['UpcomingElectionYear']}
-                <br><b>Service Connections</b> ${properties['Service_Co']}
-                <br><b>System Population:</b> ${properties['Population']}
-                <br><b>Population by Race:</b>
+                <br><a href="https://innovation.luskin.ucla.edu/" target="_blank">Datos Completos del Sistema de Agua</a>
+                <br><b>Tipo de Gobernanza:</b> ${properties['GovernanceType']}
+                <br><b>Cómo se Elige el Liderazgo:</b> ${properties['Mechanism']}
+                <br><b>Próximo Año de Elecciones:</b> ${properties['UpcomingElectionYear']}
+                <br><b>Conexiones de Servicio:</b> ${properties['Service_Co']}
+                <br><b>Población del Sistema:</b> ${properties['Population']}
+                <br><b>Población por Raza:</b>
                 <br><div id="apexchart">
                 </div></p>
                 
@@ -890,103 +890,103 @@ function createInfoPanel(){
        else if(fieldtomap == 'Service_Co'){
                 this._div.innerHTML = `
                 <p style="color:black;font-size:14px;line-height:1.5em;">
-                <b>Governance Information</b>
+                <b>Información de Gobernanza</b>
                 <br><b>${properties['Name']}</b>
-                <br><a href="https://innovation.luskin.ucla.edu/" target="_blank">Full Water System Data</a>
-                <br><b>Governance Type:</b> ${properties['GovernanceType']}
-                <br><b>How is Leadership Chosen?:</b> ${properties['Mechanism']}
-                <br><b>Next Election Year:</b> ${properties['UpcomingElectionYear']}
-                <br><b>Service Connections</b> ${properties['Service_Co']}
-                <br><b>System Population:</b> ${properties['Population']}
-                <br><b>Population by Race:</b>
+                <br><a href="https://innovation.luskin.ucla.edu/" target="_blank">Datos Completos del Sistema de Agua</a>
+                <br><b>Tipo de Gobernanza:</b> ${properties['GovernanceType']}
+                <br><b>Cómo se Elige el Liderazgo:</b> ${properties['Mechanism']}
+                <br><b>Próximo Año de Elecciones:</b> ${properties['UpcomingElectionYear']}
+                <br><b>Conexiones de Servicio:</b> ${properties['Service_Co']}
+                <br><b>Población del Sistema:</b> ${properties['Population']}
+                <br><b>Población por Raza:</b>
                 <br><div id="apexchart">
                 </div></p>
                 
                 ` }    
         else if(fieldtomap == 'WaterBill'){
                 this._div.innerHTML = 
-                `<p style="color:black;font-size:14px;line-height:1.5em;"><b>Water Bill Information</b>
+                `<p style="color:black;font-size:14px;line-height:1.5em;"><b>Información de la Factura de Agua</b>
                 <br><b>${properties['Name']}</b>
-                <br><b>Average Water Bill:</b> $${properties['WaterBill']}
-                <br>My water bill is <b>${properties['RiskCode_Percent']}% ${properties['OU']}</b> the average bill in
-                <br> Los Angeles County.
-                <br>It takes <b>${properties['HMW']} hours of minimum wage</b>
-                <br> to pay my water bill.
+                <br><b>Factura Media de Agua:</b> $${properties['WaterBill']}
+                <br>Mi factura de agua es <b>${properties['RiskCode_Percent']}% ${properties['OU']}</b> la factura media en
+                <br> el condado de Los Ángeles.
+                <br>Se necesita una <b>${properties['HMW']} horas de salario minimo</b>
+                <br> para pagar su factura de agua.
                 </p> 
-                <p style="color:black;font-size:10px;">Average water bill is calculated assuming average household consumption of 6 CCF which reflects both water conservation goals and meets California's Human Right to Water goal.</p> `}     
+                <p style="color:black;font-size:10px;">Projecto de media factura se calcula asumiendo un consumo doméstico promedio de 6 CCF, lo que refleja tanto los objetivos de conservación del agua como el objetivo del derecho humano al agua de California.</p> `}     
         else if(fieldtomap == 'HMW'){
                  this._div.innerHTML =
-                 `<p style="color:black;font-size:14px;line-height:1.5em;"><b>Water Bill Information</b>
-                <br><b>${properties['Name']}</b>
-                <br><b>Average Water Bill:</b> $${properties['WaterBill']}
-                <br>My water bill is <b>${properties['RiskCode_Percent']}% ${properties['OU']}</b> the average bill in
-                <br> Los Angeles County.
-                <br>It takes <b>${properties['HMW']} hours of minimum wage</b>
-                <br> to pay my water bill.
-                </p> 
-                <p style="color:black;font-size:10px;">Average water bill is calculated assuming average household consumption of 6 CCF which reflects both water conservation goals and meets California's Human Right to Water goal.</p>`}  
+                 `<p style="color:black;font-size:14px;line-height:1.5em;"><b>Información de la Factura de Agua</b>
+                 <br><b>${properties['Name']}</b>
+                 <br><b>Factura Media de Agua:</b> $${properties['WaterBill']}
+                 <br>Mi factura de agua es <b>${properties['RiskCode_Percent']}% ${properties['OU']}</b> la factura media en
+                 <br> el condado de Los Ángeles.
+                 <br>Se necesita una <b>${properties['HMW']} horas de salario minimo</b>
+                 <br> para pagar su factura de agua.
+                 </p> 
+                 <p style="color:black;font-size:10px;">Projecto de media factura se calcula asumiendo un consumo doméstico promedio de 6 CCF, lo que refleja tanto los objetivos de conservación del agua como el objetivo del derecho humano al agua de California.</p>`}  
         else if(fieldtomap == 'RiskCode_RiskCode'){
                 this._div.innerHTML =
-                `<p style="color:black;font-size:14px;line-height:1em;"><b>System Performance</b>
+                `<p style="color:black;font-size:14px;line-height:1.5em;"><b>Rendimiento del Sistema</b>
                 <br><b>${properties['Name']}</b>
-                <br><a href="https://innovation.luskin.ucla.edu/" target="_blank">Full Water System Data</a>
-                <br><b>Risk Assessment</b>
-                <br>The LA County Risk Assessment anaylzed water systems with 3300 or fewer service connections to detect their risk of failure.
-                <br><b>Risk Score:</b> ${properties['RiskCode_SpanRiskScore']}
-                <br><a href="https://innovation.luskin.ucla.edu/wp-content/uploads/2021/07/LA-County-Small-Water-System-Risk-Assessment.pdf" target="_blank">Read the LA County Risk Assessment Here</a>
-                <br><b>Water System Operators</b>
-                <br>Water System Operators are trained and certified to monitor system and treatment operations.  
-                <br><b>Required System Operator Level:</b> ${properties['NewSpanMerge_ReqOp']}
-                <br><b>Current System Operator Level:</b> ${properties['NewSpanMerge_HighestOp']}
-                <br>This system had <b> ${properties['NewSpanMerge_FiveMCL']} health violations </b> from 2014-2018.
+                <br><a href="https://innovation.luskin.ucla.edu/" target="_blank">Datos Completos del Sistema de Agua</a>
+                <br><b>Evaluación de Riesgos</b>
+                <br>La Evaluación de Riesgos del Condado de Los Ángeles analizó los sistemas de agua con 3300 o menos conexiones de servicio para detectar su falla de riesgo.
+                <br><b>Puntuación de Riesgo:</b> ${properties['RiskCode_SpanRiskScore']}
+                <br><a href="https://innovation.luskin.ucla.edu/wp-content/uploads/2021/07/LA-County-Small-Water-System-Risk-Assessment.pdf" target="_blank">Lea la Evaluación de Riesgos del Condado de Los Ángeles aquí.</a>
+                <br><b>Operadores de Sistemas de Agua</b>
+                <br>Operadores de sistemas de agua están capacitados y certificados para las operaciones de tratamiento y manteniendo los sistemas.  
+                <br><b>Nivel de Operador del Sistema Requerido:</b> ${properties['NewSpanMerge_ReqOp']}
+                <br><b>Nivel de Operador del Sistema Actual:</b> ${properties['NewSpanMerge_HighestOp']}
+                <br>Este sistema tiene<b> ${properties['NewSpanMerge_FiveMCL']} violaciones de salud </b> durante 2014-2018.
                     
                 </p>`}  
         else if(fieldtomap == 'RiskCode_FiveMCL'){
                 this._div.innerHTML =
-                                    `<p style="color:black;font-size:14px;line-height:1.5em;"><b>System Performance</b>
+                                    `<p style="color:black;font-size:14px;line-height:1.5em;"><b>Rendimiento del Sistema</b>
                                     <br><b>${properties['Name']}</b>
-                                    <br><a href="https://innovation.luskin.ucla.edu/" target="_blank">Full Water System Data</a>
-                                    <br><b>Risk Assessment</b>
-                                    <br>The LA County Risk Assessment anaylzed water systems with 3300 or fewer service connections to detect their risk of failure.
-                                    <br><b>Risk Score:</b> ${properties['RiskCode_SpanRiskScore']}
-                                    <br><a href="https://innovation.luskin.ucla.edu/wp-content/uploads/2021/07/LA-County-Small-Water-System-Risk-Assessment.pdf" target="_blank">Read the LA County Risk Assessment Here</a>
-                                    <br><b>Water System Operators</b>
-                                    <br>Water System Operators are trained and certified to monitor system and treatment operations.  
-                                    <br><b>Required System Operator Level:</b> ${properties['NewSpanMerge_ReqOp']}
-                                    <br><b>Current System Operator Level:</b> ${properties['NewSpanMerge_HighestOp']}
-                                    <br>This system had <b> ${properties['NewSpanMerge_FiveMCL']} health violations </b> from 2014-2018.
+                                    <br><a href="https://innovation.luskin.ucla.edu/" target="_blank">Datos Completos del Sistema de Agua</a>
+                                    <br><b>Evaluación de Riesgos</b>
+                                    <br>La Evaluación de Riesgos del Condado de Los Ángeles analizó los sistemas de agua con 3300 o menos conexiones de servicio para detectar su falla de riesgo.
+                                    <br><b>Puntuación de Riesgo:</b> ${properties['RiskCode_SpanRiskScore']}
+                                    <br><a href="https://innovation.luskin.ucla.edu/wp-content/uploads/2021/07/LA-County-Small-Water-System-Risk-Assessment.pdf" target="_blank">Lea la Evaluación de Riesgos del Condado de Los Ángeles aquí.</a>
+                                    <br><b>Operadores de Sistemas de Agua</b>
+                                    <br>Operadores de sistemas de agua están capacitados y certificados para las operaciones de tratamiento y manteniendo los sistemas.  
+                                    <br><b>Nivel de Operador del Sistema Requerido:</b> ${properties['NewSpanMerge_ReqOp']}
+                                    <br><b>Nivel de Operador del Sistema Actual:</b> ${properties['NewSpanMerge_HighestOp']}
+                                    <br>Este sistema tiene<b> ${properties['NewSpanMerge_FiveMCL']} violaciones de salud </b> durante 2014-2018.
                                         
                                     </p>`}   
         else if(fieldtomap == 'Operator Below Required'){
                 this._div.innerHTML =
-                `<p style="color:black;font-size:14px;line-height:1.5em;"><b>System Performance</b>
+                `<p style="color:black;font-size:14px;line-height:1.5em;"><b>Rendimiento del Sistema</b>
                 <br><b>${properties['Name']}</b>
-                <br><a href="https://innovation.luskin.ucla.edu/" target="_blank">Full Water System Data</a>
-                <br><b>Risk Assessment</b>
-                <br>The LA County Risk Assessment anaylzed water systems with 3300 or fewer service connections to detect their risk of failure.
-                <br><b>Risk Score:</b> ${properties['RiskCode_SpanRiskScore']}
-                <br><a href="https://innovation.luskin.ucla.edu/wp-content/uploads/2021/07/LA-County-Small-Water-System-Risk-Assessment.pdf" target="_blank">Read the LA County Risk Assessment Here</a>
-                <br><b>Water System Operators</b>
-                <br>Water System Operators are trained and certified to monitor system and treatment operations.  
-                <br><b>Required System Operator Level:</b> ${properties['NewSpanMerge_ReqOp']}
-                <br><b>Current System Operator Level:</b> ${properties['NewSpanMerge_HighestOp']}
-                <br>This system had <b> ${properties['NewSpanMerge_FiveMCL']} health violations </b> from 2014-2018.
-                
+                <br><a href="https://innovation.luskin.ucla.edu/" target="_blank">Datos Completos del Sistema de Agua</a>
+                <br><b>Evaluación de Riesgos</b>
+                <br>La Evaluación de Riesgos del Condado de Los Ángeles analizó los sistemas de agua con 3300 o menos conexiones de servicio para detectar su falla de riesgo.
+                <br><b>Puntuación de Riesgo:</b> ${properties['RiskCode_SpanRiskScore']}
+                <br><a href="https://innovation.luskin.ucla.edu/wp-content/uploads/2021/07/LA-County-Small-Water-System-Risk-Assessment.pdf" target="_blank">Lea la Evaluación de Riesgos del Condado de Los Ángeles aquí.</a>
+                <br><b>Operadores de Sistemas de Agua</b>
+                <br>Operadores de sistemas de agua están capacitados y certificados para las operaciones de tratamiento y manteniendo los sistemas.  
+                <br><b>Nivel de Operador del Sistema Requerido:</b> ${properties['NewSpanMerge_ReqOp']}
+                <br><b>Nivel de Operador del Sistema Actual:</b> ${properties['NewSpanMerge_HighestOp']}
+                <br>Este sistema tiene<b> ${properties['NewSpanMerge_FiveMCL']} violaciones de salud </b> durante 2014-2018.
+                    
                 </p>`}   
         else if(fieldtomap == 'No operator'){
-                this._div.innerHTML =`<p style="color:black;font-size:14px;line-height:1.5em;"><b>System Performance</b>
+                this._div.innerHTML =`<p style="color:black;font-size:14px;line-height:1.5em;"><b>Rendimiento del Sistema</b>
                 <br><b>${properties['Name']}</b>
-                <br><a href="https://innovation.luskin.ucla.edu/" target="_blank">Full Water System Data</a>
-                <br><b>Risk Assessment</b>
-                <br>The LA County Risk Assessment anaylzed water systems with 3300 or fewer service connections to detect their risk of failure.
-                <br><b>Risk Score:</b> ${properties['RiskCode_SpanRiskScore']}
-                <br><a href="https://innovation.luskin.ucla.edu/wp-content/uploads/2021/07/LA-County-Small-Water-System-Risk-Assessment.pdf" target="_blank">Read the LA County Risk Assessment Here</a>
-                <br><b>Water System Operators</b>
-                <br>Water System Operators are trained and certified to monitor system and treatment operations.  
-                <br><b>Required System Operator Level:</b> ${properties['NewSpanMerge_ReqOp']}
-                <br><b>Current System Operator Level:</b> ${properties['NewSpanMerge_HighestOp']}
-                <br>This system had <b> ${properties['NewSpanMerge_FiveMCL']} health violations </b> from 2014-2018.
-                
+                <br><a href="https://innovation.luskin.ucla.edu/" target="_blank">Datos Completos del Sistema de Agua</a>
+                <br><b>Evaluación de Riesgos</b>
+                <br>La Evaluación de Riesgos del Condado de Los Ángeles analizó los sistemas de agua con 3300 o menos conexiones de servicio para detectar su falla de riesgo.
+                <br><b>Puntuación de Riesgo:</b> ${properties['RiskCode_SpanRiskScore']}
+                <br><a href="https://innovation.luskin.ucla.edu/wp-content/uploads/2021/07/LA-County-Small-Water-System-Risk-Assessment.pdf" target="_blank">Lea la Evaluación de Riesgos del Condado de Los Ángeles aquí.</a>
+                <br><b>Operadores de Sistemas de Agua</b>
+                <br>Operadores de sistemas de agua están capacitados y certificados para las operaciones de tratamiento y manteniendo los sistemas.  
+                <br><b>Nivel de Operador del Sistema Requerido:</b> ${properties['NewSpanMerge_ReqOp']}
+                <br><b>Nivel de Operador del Sistema Actual:</b> ${properties['NewSpanMerge_HighestOp']}
+                <br>Este sistema tiene<b> ${properties['NewSpanMerge_FiveMCL']} violaciones de salud </b> durante 2014-2018.
+                    
                 </p>`}  
 //Spanish Info Box Code Here 
                                             if(fieldtomap == 'SpanGovernanceCode'){
